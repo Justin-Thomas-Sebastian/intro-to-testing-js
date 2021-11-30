@@ -14,18 +14,25 @@ describe('helloWorld', function() {
     });
 });
 
-describe('helloWorld', function() {
-    it('should be a defined function', function() {
-        expect(sayHello).toBeDefined();
-    });
 
-    it('should return a string', function(){
+describe('sayHello', function() {
+    it("should be a defined function", function(){
+       expect(typeof sayHello).toBe("function");
+    });
+    it("should return a string when called", function(){
         expect(typeof sayHello()).toBe("string");
     });
-
-    it('should return "Hello!" when no arguments are passed', function(){
-        expect(sayHello()).toBe("Hello!");
+    it("sayHello('Sebastian') should return 'Hello, Sebastian!'", function(){
+        expect(sayHello("Sebastian")).toBe("Hello, Sebastian!");
+    });
+    it("sayHello('Justin') should return 'Hello, Justin!'", function(){
+        expect(sayHello("Justin")).toBe("Hello, Justin!");
+    });
+    it("sayHello('Pat') should return 'Hello, Pat!'", function(){
+        expect(sayHello("Pat")).toBe("Hello, Pat!");
     });
 });
+
+
 
 
