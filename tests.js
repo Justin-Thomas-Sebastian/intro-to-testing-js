@@ -73,6 +73,106 @@ describe('isFive', function() {
     });
 });
 
+// Unit Tests for isEven
+describe('isEven', function(){
+    it("should be a defined function", function(){
+        expect(typeof isEven).toBe("function");
+    });
+    it("should return a boolean when called", function(){
+        expect(typeof isEven()).toBe("boolean");
+    });
+    it("should return true when 2 (Number) is passed", function(){
+        expect(isEven(2)).toBe(true);
+    });
+    it("should return true when -4 (Number) is passed", function(){
+        expect(isEven(-4)).toBe(true);
+    });
+    it("should return false when 3 (Number) is passed", function(){
+        expect(isEven(3)).toBe(false);
+    });
+    it("should return false when 'banana' is passed", function(){
+        expect(isEven("banana")).toBe(false);
+    });
+    it("should return true when '8' is passed", function(){
+        expect(isEven("8")).toBe(true);
+    });
+    it("should return false when Infinity is passed", function(){
+        expect(isEven(Infinity)).toBe(false);
+    });
+    it("should return false when true is passed", function(){
+        expect(isEven(true)).toBe(false);
+    });
+    it("should return false when false is passed", function(){
+        expect(isEven(false)).toBe(false);
+    });
+    it("should return false when there is no arguments passed", function(){
+        expect(isEven()).toBe(false);
+    });
+
+});
+
+// Unit Tests for isVowel
+describe("isVowel", function(){
+    it("should be a defined function", function(){
+       expect(typeof isVowel).toBe("function");
+    });
+    it("should return a boolean when called", function(){
+        expect(typeof isEven()).toBe("boolean");
+    });
+    it("it should return true when 'a' is passed", function(){
+        expect(isVowel("a")).toBe(true);
+    });
+    it("it should return true when 'A' is passed", function(){
+        expect(isVowel("A")).toBe(true);
+    });
+    it("it should return false when 'y' is passed", function(){
+        expect(isVowel("y")).toBe(false);
+    });
+    it("it should return false when 4 (Number) is passed", function(){
+        expect(isVowel(4)).toBe(false);
+    });
+    it("it should return false when true is passed", function(){
+        expect(isVowel(true)).toBe(false);
+    });
+    it("it should return false when false is passed", function(){
+        expect(isVowel(false)).toBe(false);
+    });
+    it("it should return false when 'banana' is passed", function(){
+        expect(isVowel("banana")).toBe(false);
+    });
+    it("it should return false when no arguments are passed", function(){
+        expect(isVowel()).toBe(false);
+    });
+});
+
+// Unit Tests for add
+describe("add", function(){
+    it("should be a defined function", function(){
+        expect(typeof add).toBe("function");
+    });
+    it("should return a Number when called", function(){
+        expect(typeof add()).toBe("number");
+    });
+    it("should return 5 when 2 and 3 are passed", function(){
+        expect(add(2,3)).toBe(5);
+    });
+    it("should return -12 when -3 and -9 are passed", function(){
+        expect(add(-3,-9)).toBe(-12);
+    });
+    it("should return 11 when '5' and 6 are passed", function(){
+        expect(add("5",6)).toBe(11);
+    });
+    it("should return NaN when 'banana' and 'split' are passed", function(){
+        expect(add("banana","split")).toBeNaN();
+    });
+    it("should return NaN when 2 and 'apples' are passed", function(){
+        expect(add(2,"apples")).toBeNaN();
+    });
+    it("should return NaN when no arguments are passed", function(){
+        expect(add()).toBeNaN();
+    });
+});
+
 
 
 
