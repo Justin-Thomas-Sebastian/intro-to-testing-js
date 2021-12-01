@@ -57,6 +57,23 @@ describe('sayHello', function() {
     });
 });
 
+// Unit Tests for isFive
+describe('isFive', function() {
+    it('should be a defined function', function() {
+        expect(typeof isFive).toBe("function");
+    });
+    it('should return a boolean when called', function() {
+        expect(typeof isFive()).toBe("boolean");
+    });
+    it('should return the boolean true when 5 (Number) is passed', function() {
+        expect(isFive(5)).toBe(true);
+    });
+    it('should return the boolean false when "5" (String) is passed', function() {
+        expect(isFive("5")).toBe(false);
+    });
+});
+
+
 
 
 
