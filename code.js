@@ -19,11 +19,7 @@ function sayHello(name){
 
 // isFive function
 function isFive(num){
-  if(num === 5){
-      return true;
-  } else {
-      return false;
-  }
+  return num === 5;
 }
 
 // isEven function
